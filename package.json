@@ -3,6 +3,21 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
+	"description": "some description",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/surak8/test-pino.git"
+	},
+	"author": {
+		"name": "rik cousens",
+		"email": "rik.cousens@gmail.com"
+	},
+	"contributors": [
+		{
+			"name": "rik cousens",
+			"email": "rik.cousens@gmail.com"
+		}
+	],
 	"dependencies": {
 		"fs": "^0.0.1-security",
 		"path": "^0.12.7",
