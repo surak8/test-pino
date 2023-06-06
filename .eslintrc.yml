@@ -1,0 +1,40 @@
+env:
+  browser: true
+  commonjs: true
+  es2021: true
+  node: true
+extends: eslint:recommended
+overrides: []
+parserOptions:
+  ecmaVersion: 8
+rules:
+  indent:
+    - error
+    - tab
+    - SwitchCase: 1
+  linebreak-style:
+    - error
+    - windows
+  quotes:
+    - error
+    - double
+  semi:
+    - error
+    - always
+  no-unused-vars: warn
+  no-undefined: 'off'
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+      maxBOF: 0
+      maxEOF: 0
+  no-mixed-spaces-and-tabs:
+    - error
+    - smart-tabs
+  no-multi-spaces:
+    - error
+    - ignoreEOLComments: true
+  no-trailing-spaces:
+    - error
+    - skipBlankLines: false
+      ignoreComments: true

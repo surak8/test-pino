@@ -1,0 +1,21 @@
+{
+	"name": "test-pino",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"fs": "^0.0.1-security",
+		"path": "^0.12.7",
+		"pino": "^8.14.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.42.0"
+	},
+	"scripts": {
+		"clean": "yarn clean:0&&yarn clean:1&&yarn clean:2&&yarn clean:3",
+		"clean:0": "IF EXIST logs RD /Q/S logs",
+		"clean:1": "IF EXIST node_modules RD /Q/S node_modules",
+		"clean:2": "IF EXIST package-lock.json DEL /Q package-lock.json",
+		"clean:3": "IF EXIST yarn.lock DEL /Q yarn.lock"
+	}
+}
