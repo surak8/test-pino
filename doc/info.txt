@@ -1,3 +1,6 @@
 git remote add origin https://github.com/surak8/test-pino.git
 git branch -M main
 git push -u origin main
+
+
+https://getpino.io/#/docs/api?id=options
