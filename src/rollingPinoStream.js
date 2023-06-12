@@ -33,7 +33,6 @@ class RollingPinoStream {
 		const pkgContent = require(path.join(process.cwd(), "package.json"));
 
 		return pkgContent.name || "ERROR";
-
 	}
 
 	extractDateComponents(adate) {
