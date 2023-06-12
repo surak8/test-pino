@@ -4,3 +4,8 @@ git push -u origin main
 
 
 https://getpino.io/#/docs/api?id=options
+
+yarn add pino-abstract-transport@1.0.0 DOES NOT WORK
+-- readable-stream@4.40 wants ^12.22.0, ^14.17.0, ^16.0.0 version of NODEJS
+
+yarn add pino-abstract-transport@0.5.0 SEEMS TO WORK?

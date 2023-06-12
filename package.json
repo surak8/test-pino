@@ -21,11 +21,10 @@
 	"dependencies": {
 		"fs": "^0.0.1-security",
 		"path": "^0.12.7",
-		"pino": "^8.14.1"
+		"pino": "6.10.0",
+		"pino-abstract-transport": "0.5.0"
 	},
-	"devDependencies": {
-		"eslint": "^8.42.0"
-	},
+	"devDependencies": {},
 	"scripts": {
 		"clean": "yarn clean:0&&yarn clean:1&&yarn clean:2&&yarn clean:3",
 		"clean:0": "IF EXIST logs RD /Q/S logs",
