@@ -1,12 +1,12 @@
 //const fs = require("fs");
-const path = require("path");
-const pino1 = require("pino");
-const { RollingPinoStream } = require("./rollingPinoStream");
+const path = require('path');
+const pino1 = require('pino');
+const { RollingPinoStream } = require('./rollingPinoStream');
 
 function extractPackageName() {
-	const pkgContent = require(path.join(process.cwd(), "package.json"));
+	const pkgContent = require(path.join(process.cwd(), 'package.json'));
 
-	return pkgContent.name || "ERROR";
+	return pkgContent.name || 'ERROR';
 }
 
 //function createLogDirectory() {
@@ -24,7 +24,7 @@ function createLogger(customLogger = false) {
 	var opts, logFile, stream;
 
 	opts = {
-		level: process.env.PINO_LOG_LEVEL || "trace",
+		level: process.env.PINO_LOG_LEVEL || 'trace',
 		formatters: {
 			level: (label) => { return { level: label.toUpperCase() }; },
 			bindings: (bindings) => { return { host: bindings.hostname }; },
@@ -35,7 +35,7 @@ function createLogger(customLogger = false) {
 	if (customLogger) {
 		opts.writable = true;
 		stream = new RollingPinoStream({
-			logDirectory: path.join(process.cwd(), "logs"),
+			logDirectory: path.join(process.cwd(), 'logs'),
 			baseLogfilename: extractPackageName()
 
 		});
@@ -51,11 +51,11 @@ function formatDate(date) {
 	var str = date.toString();
 
 	return str.slice(8, 10) /* day */ +
-		"-" +
+		'-' +
 		str.slice(4, 7).toUpperCase() /* month */ +
-		"-" +
+		'-' +
 		str.slice(11, 15) /* year */ +
-		" " +
+		' ' +
 		str.slice(16, 24) /* time portion */;
 
 }
@@ -76,12 +76,12 @@ need to:
 function testLogger(isAbstract = false) {
 	var logger = createLogger(isAbstract);
 
-	logger.fatal("fatal");
-	logger.error("error");
-	logger.warn("warn");
-	logger.info("info");
-	logger.debug("debug");
-	logger.trace("trace");
+	logger.fatal('fatal');
+	logger.error('error');
+	logger.warn('warn');
+	logger.info('info');
+	logger.debug('debug');
+	logger.trace('trace');
 }
 
 try {

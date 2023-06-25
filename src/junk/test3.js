@@ -10,7 +10,7 @@ var UserData = function (request) {
 		name = request.name;
 	else
 		//var name = "Not Available";
-		name = "Not Available";
+		name = 'Not Available';
 
 	if (request.age)
 		//var age = request.age;
@@ -31,7 +31,7 @@ var UserData = function (request) {
 var Adults = {
 
 	printName: function (instance) { // Read propery example
-		console.log("Mr. " + instance.userName);
+		console.log('Mr. ' + instance.userName);
 	},
 
 	changeName: function (instance, newName) { // Write property example
@@ -39,7 +39,7 @@ var Adults = {
 	},
 
 	foo: function () {
-		console.log("foo");
+		console.log('foo');
 	}
 
 };
@@ -47,17 +47,17 @@ var Adults = {
 var Children = {
 
 	printName: function (instance) {
-		console.log("Master " + instance.userName);
+		console.log('Master ' + instance.userName);
 	},
 
 	bar: function () {
-		console.log("bar");
+		console.log('bar');
 	}
 
 };
 
 // Initialize
-var userData = UserData({ name: "Doe", age: 40 });
+var userData = UserData({ name: 'Doe', age: 40 });
 
 // Call methods
 Adults.printName(userData); // Output 'Mr. Doe'
@@ -66,5 +66,5 @@ Children.printName(userData); // Output 'Master Doe'
 Adults.foo(); // Output 'foo'
 Children.bar(); // Output 'bar'
 
-Adults.changeName(userData, "John");
+Adults.changeName(userData, 'John');
 Adults.printName(userData); // Output 'Mr. John'

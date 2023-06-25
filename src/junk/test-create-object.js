@@ -12,6 +12,6 @@ const personFactory = (firstName, lastName, email) => {
 };
 
 let person = personFactory(
-	"John", "Doe", "jdoe@example.com");
+	'John', 'Doe', 'jdoe@example.com');
 
 console.log(person.info());

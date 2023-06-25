@@ -5,7 +5,7 @@ var myFakeStream = function (afilename) {
 };
 
 myFakeStream.prototype.write = function (a, b, c) {
-	console.log("here-3");
+	console.log('here-3');
 };
 
 module.exports.myFakeStream = myFakeStream;
